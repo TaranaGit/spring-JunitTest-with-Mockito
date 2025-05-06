@@ -1,17 +1,48 @@
-# spring-JunitTest-with-Mockito
+## Spring Boot Unit Testing with JUnit & Mockito
 
-* Spring Boot is the most popular framework for building RESTful Services, offering great unit testing tools with Spring Boot Starter Test. Mockito is the most widely used framework for mocking and JUnit is commonly employed for Java unit testing.
+This project demonstrates robust unit testing in a Spring Boot application using **JUnit**, **Mockito**, and **Spring Boot Starter Test**. It focuses on creating and verifying tests for the **Controller**, **Service**, and **Repository** layers of a RESTful API that manages `Teacher` entities.
 
-* In this Spring Boot project, comprehensive JUnit tests have been crafted utilizing Mockito for the Controller, Service, and Repository layers. The Controller layer's methods, such as save(), fetchDataById(), and fetchDataByName(),fetchDataByCourse() which manage teacher entities' data (including ID, name, email, phone, and course taught), are rigorously tested to ensure correct functionality. Similarly, thorough test cases are implemented for the Repository and Service layers, validating the persistence and business logic aspects of the application.
+## 📚 Project Overview
 
-* Mockito, along with MockBean and Builder, are integral components in crafting effective JUnit tests.
+Built with Spring Boot, this RESTful application handles `Teacher` entity data — including `ID`, `name`, `email`, `phone`, and `course taught`. The following controller methods are fully tested:
 
-    * Mockito
-        - Enables the creation of mock objects to simulate the behavior of dependencies, ensuring isolated testing environments 
+- `save()` – Save a new teacher
+- `fetchDataById()` – Retrieve a teacher by ID
+- `fetchDataByName()` – Retrieve a teacher by name
+- `fetchDataByCourse()` – Retrieve teachers by course
 
-    * MockBean   
-        - Designed for Spring Boot applications, facilitates the creation of mock instances of Spring beans, aiding in dependency injection during testing
+Each layer of the application is rigorously tested to ensure **data persistence**, **business logic correctness**, and **API reliability**.
 
-    * Buliders
-        - The use of builders allows for the creation of test objects with customizable attributes, enhancing test coverage and flexibility in unit testing scenarios.
- 
+## 🧰 Tech Stack
+
+- **Java 17+**
+- **Spring Boot**
+- **Spring Web**
+- **Spring Data JPA**
+- **H2 / MySQL (optional for testing)**
+- **JUnit 5**
+- **Mockito**
+- **MockBean**
+- **Builder pattern for test objects**
+
+## ✅ Key Testing Tools
+
+### 🔹 Mockito
+Used to create mock objects, allowing you to test components in isolation by simulating dependencies.
+
+### 🔹 MockBean
+Spring Boot annotation that allows mocking of Spring-managed beans for injection during testing.
+
+### 🔹 Builder Pattern
+Used to create flexible and readable test data with custom attributes for comprehensive test coverage.
+
+## 🧪 Test Coverage Highlights
+
+- ✅ Controller Layer Unit Tests  
+  Validates all API endpoints using mocked service logic.
+
+- ✅ Service Layer Unit Tests  
+  Ensures business logic runs as expected with mocked repository behavior.
+
+- ✅ Repository Layer Tests  
+  Optionally uses H2 or real DB for integration-like testing of JPA queries.
